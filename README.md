@@ -1,1 +1,1 @@
-# smaro-elite.github.io
+# smaro-nitr.github.io
