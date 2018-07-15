@@ -9,18 +9,20 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/app.css">
         <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
      </head>
-    <body>
-        <nav class="navbar sticky-top" style="background:#003171;">
+    <body id="smaro-nitr">
+        <nav class="navbar sticky-top">
             <span class="navbar-brand mb-0 h1">
-                <img src="img/me-icon.jpg" width="30" height="30" class="d-inline-block align-top" alt="sks">
-                <span style="color:#fff;">Subhendu Kumar Sahoo</span>
+                <img src="img/me-icon.jpg" width="30" height="30" class="d-inline-block align-middle" alt="sks">
+                <span>Subhendu Kumar Sahoo</span>
             </span>
-            <button class="btn btn-outline-primary my-2 my-sm-0" data-toggle="modal" data-target="#connectModalCenter">Connect</button>
+            <button class="btn btn-outline-primary my-2 my-sm-0 vis-0-576" data-toggle="modal" data-target="#connectModalCenter"><i class="fas fa-user fs-16"></i></button>
+            <button class="btn btn-outline-primary my-2 my-sm-0 vis-576-x" data-toggle="modal" data-target="#connectModalCenter"><i class="fas fa-user fs-16"></i> Connect</button>
         </nav>
 
         <div class="modal fade" id="connectModalCenter" tabindex="-1" role="dialog" aria-labelledby="connectModalCenterTitle" aria-hidden="true">
@@ -28,35 +30,35 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title" id="connectModalCenterTitle">
-                            <img src="img/me-icon.jpg" width="45" height="45" class="d-inline-block align-top" alt=""> Subhendu Kumar Sahoo
+                            <img src="img/me-icon.jpg" width="45" height="45" class="d-inline-block align-middle" alt=""> Subhendu Kumar Sahoo
                         </h3>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                        <button type="button" class="close align-middle" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" class="d-inline-block align-middle">&times;</span>
                         </button>
                     </div>
                     <div class="modal-body">
-                        <table width="100%" style="font-weight:600; font-size:1.25em;">
+                        <table width="100%" class="connect-table">
                             <tr><td>&nbsp;</td></tr>
                             <tr>
-                                <td><i class="fab fa-github" style="font-size:32px; color:#003171; text-align:center;"></i>
+                                <td><i class="fab fa-github icon-design-override-1"></i>
                                 <td>&nbsp;<a href="https://github.com/smaro-nitr" target="_blank">Github</a></td>
                                 <td>&nbsp;</td colspan="6">
                             </tr>
                             <tr>
                                 <td colspan="2">&nbsp;</td>
-                                <td><i class="fab fa-linkedin" style="font-size:32px; color:#003171; text-align:center;"></i>
+                                <td><i class="fab fa-linkedin icon-design-override-1"></i>
                                 <td>&nbsp;<a href="https://www.linkedin.com/in/smaronitr/" target="_blank">LinkedIn</a></td>    
                                 <td colspan="4">&nbsp;</td>
                             </tr>
                             <tr>
                                 <td colspan="4">&nbsp;</td>
-                                <td><i class="fab fa-google" style="font-size:27px; color:#003171; text-align:center;"></i>
+                                <td><i class="fab fa-google icon-design-override-1"></i>
                                 <td>&nbsp;<a href="mailto:smaro.nitr@gmail.com">Mailing</a></td>
                                 <td colspan="2">&nbsp;<td>
                             </tr>
                             <tr>
                                 <td colspan="6">&nbsp;</td>
-                                <td><i class="fas fa-map" style="font-size:25px; color:#003171; text-align:center;"></i></td>
+                                <td><i class="fas fa-map icon-design-override-1"></i></td>
                                 <td>&nbsp;<a href="https://www.google.com/maps/place/Pune,+Maharashtra/@18.5247663,73.7929269,12z" target="_blank">Address</a></td>
                             </tr>
                             <tr><td>&nbsp;</td></tr>
@@ -97,11 +99,11 @@
                                     What I <i class="fas fa-heart"></i> to do ?
                                 </h3>
                                 <p class="card-text">
-                                    <br><span class="badge badge-info" style="font-size:16px"><i class="fas fa-utensils"></i> Eat</span> <br><br>
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-bed"></i> Sleep</span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-plane"></i> Travel</span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> Play with <span style="text-decoration: line-through; color:#aaa">Heart</span> Code</span> <br><br>
-                                    <span class="badge badge-secondary" style="font-size:16px"><i class="fas fa-sync fa-spin"></i> Repeat</span>
+                                    <br><span class="badge badge-info fs-16"><i class="fas fa-utensils"></i> Eat</span> <br><br>
+                                    <span class="badge badge-info fs-16"><i class="fas fa-bed"></i> Sleep</span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-plane"></i> Travel</span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Play with <span id="strike-off">Heart</span> Code</span> <br><br>
+                                    <span class="badge badge-secondary fs-16"><i class="fas fa-sync fa-spin"></i> Repeat</span>
                                 </p>
                             </div>
                         </div>
@@ -114,26 +116,26 @@
                                     What I <i class="fas fa-keyboard"></i> now ?
                                 </h3>
                                 <p class="card-text">
-                                    <br><span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> HTML5 </span> &nbsp;
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> CSS3 </span> &nbsp;
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> SASS </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> Bootstrap </span> &nbsp;
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> AngularMaterial6 </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> JavaScript</span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> AngularJs </span> &nbsp; 
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> AngularJs6 </span> &nbsp;
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-code"></i> Jquery</span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> NodeJs </span> &nbsp; 
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-code"></i> Java </span> &nbsp; 
-                                    <span class="badge badge-secondary" style="font-size:16px"><i class="fas fa-code"></i> PHP </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> Express </span> &nbsp;
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-code"></i> Spring </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> Moongoose </span> &nbsp;
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-code"></i> MyBatis </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> MongoDb </span> &nbsp;
-                                    <span class="badge badge-info" style="font-size:16px"><i class="fas fa-code"></i> Oracle-SQL </span> <br><br>
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> Electron </span> &nbsp;
-                                    <span class="badge badge-primary" style="font-size:16px"><i class="fas fa-code"></i> MVC </span> <br><br>
+                                    <br><span class="badge badge-primary fs-16"><i class="fas fa-code"></i> HTML5 </span> &nbsp;
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> CSS3 </span> &nbsp;
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> SASS </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Bootstrap </span> &nbsp;
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularMaterial6 </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> JavaScript</span> &nbsp;
+                                    <span class="badge badge-info fs-16"><i class="fas fa-code"></i> Jquery</span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularJs </span> &nbsp; 
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularJs6 </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> NodeJs </span> &nbsp; 
+                                    <span class="badge badge-info fs-16"><i class="fas fa-code"></i> Java </span> &nbsp; 
+                                    <span class="badge badge-secondary fs-16"><i class="fas fa-code"></i> PHP </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Express </span> &nbsp;
+                                    <span class="badge badge-info fs-16"><i class="fas fa-code"></i> Spring </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Moongoose </span> &nbsp;
+                                    <span class="badge badge-info fs-16"><i class="fas fa-code"></i> MyBatis </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> MongoDb </span> &nbsp;
+                                    <span class="badge badge-info fs-16"><i class="fas fa-code"></i> Oracle-SQL </span> <br><br>
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Electron </span> &nbsp;
+                                    <span class="badge badge-primary fs-16"><i class="fas fa-code"></i> MVC </span> <br><br>
                                 </p>
                             </div>
                         </div>
@@ -148,7 +150,7 @@
                     <div class="row">
                         <div class="card border-info w-100">
                             <div class="card-body">
-                                <h3><i class="fas fa-paper-plane" style="color:#ddc701; text-align:center;"></i> Quick Links</h3>
+                                <h3><i class="fas fa-paper-plane" id="quick-link"></i> Quick Links</h3>
                             </div>
                         </div>
                     </div>
@@ -162,9 +164,9 @@
                                 </h5>
                                 <span class="badge badge-pill badge-secondary">15th Jun 2018</span> &nbsp;
                                 <span class="badge badge-pill badge-secondary">Desktop Software</span> <h5></h5>
-                                <p class="card-text">A software to secure you against data sneaker on your personal computing browser activity such as facebook, whatsapp, etc.</p>
-                                <a href="#" class="btn btn-primary">Know More</a>
-                                <a href="#" class="btn btn-primary">Download</a>
+                                <p class="card-text">A software to secure you against data sneaker on your personal browsing activity such as facebook, whatsapp, etc.</p>
+                                <a href="#" class="btn btn-light float-left">Know More ..</a>
+                                <a href="#" class="btn btn-primary float-right"><i class="fas fa-download"></i> Download</a>
                             </div>
                         </div>
                     </div>
@@ -178,7 +180,7 @@
                                 <span class="badge badge-pill badge-secondary">15th Jun 2018</span> &nbsp;
                                 <span class="badge badge-pill badge-secondary">Blog Page</span> <h5></h5>
                                 <p class="card-text">Sometime few thoughts use to strike down deep inside me. It`s a better idea to put it somewhere. Who know may be someone is reading it & feeling the same .. May Be You !</p>
-                                <a href="#" class="btn btn-primary">Read More</a>
+                                <a href="#" class="btn btn-light">Read More ..</a>
                             </div>
                         </div>
                     </div>
@@ -186,7 +188,7 @@
                 </div>
             </div>
         </div>
-        <footer class="container-fluid jumbotron" style="margin:0; padding:15px 0; text-align:center;">
+        <footer class="container-fluid jumbotron">
             <span class="text-muted">Subhendu Kumar Sahoo &#169; 2018</span>
         </footer>
 
