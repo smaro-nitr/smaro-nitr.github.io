@@ -48,13 +48,13 @@ footer.jumbotron{
 }
 @media (min-width: 576px) {
   #smaro-nitr #connectModalCenterTitle{
-    font-size:20px;
+    font-size:27px;
   }
   .icon-design-override-1{
     font-size:20px;
   }
   #smaro-nitr .connect-table a{
-    font-size:16px;
+    font-size:20px;
   }
   .vis-0-576{
     display:none;
