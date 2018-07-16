@@ -45,27 +45,11 @@
 						<h3 class="card-title">
 							What I <i class="fas fa-keyboard"></i> now ?
 						</h3>
-						<p class="card-text">
-							<br><span class="badge badge-primary fs-16"><i class="fas fa-code"></i> HTML5 </span> &nbsp;
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> CSS3 </span> &nbsp;
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> SASS </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Bootstrap </span> &nbsp;
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularMaterial6 </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> JavaScript</span> &nbsp;
-							<span class="badge badge-info fs-16"><i class="fas fa-code"></i> Jquery</span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularJs </span> &nbsp; 
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> AngularJs6 </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> NodeJs </span> &nbsp; 
-							<span class="badge badge-info fs-16"><i class="fas fa-code"></i> Java </span> &nbsp; 
-							<span class="badge badge-secondary fs-16"><i class="fas fa-code"></i> PHP </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Express </span> &nbsp;
-							<span class="badge badge-info fs-16"><i class="fas fa-code"></i> Spring </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Moongoose </span> &nbsp;
-							<span class="badge badge-info fs-16"><i class="fas fa-code"></i> MyBatis </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> MongoDb </span> &nbsp;
-							<span class="badge badge-info fs-16"><i class="fas fa-code"></i> Oracle-SQL </span> <br><br>
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> Electron </span> &nbsp;
-							<span class="badge badge-primary fs-16"><i class="fas fa-code"></i> MVC </span> <br><br>
+						<p class="card-text dis-inline" ng-repeat="cn in codeNowData">
+							<span ng-if="$index==0"><br></span>
+							<span class="badge {{cn.Status}} fs-16"><i class="fas fa-code"></i> {{cn.Title}} </span>
+							<span ng-if="cn.NextPosition=='inline'">&nbsp;</span> 
+							<span ng-if="cn.NextPosition=='block'"><br><br></span>
 						</p>
 					</div>
 				</div>
@@ -78,43 +62,32 @@
 		<div class="col-12 col-md-4">
 			<div class="row">&nbsp;</div>
 			<div class="row">
-				<div class="card border-info w-100">
+				<div class="card border-light w-100">
 					<div class="card-body">
 						<h3><i class="fas fa-paper-plane" id="quick-link"></i> Quick Links</h3>
 					</div>
 				</div>
 			</div>
-			<div class="row">&nbsp;</div>
-			<div class="row">
-				<div class="card border-info w-100">
-					<img class="card-img-top" src="smaro-nitr/assets/img/sai.jpg" alt="sai">
-					<div class="card-body">
-						<h5 class="card-title">
-							SingleAccessInterface (SAI)<br>
-						</h5>
-						<span class="badge badge-pill badge-secondary">15th Jun 2018</span> &nbsp;
-						<span class="badge badge-pill badge-secondary">Desktop Software</span> <h5></h5>
-						<p class="card-text">A software to secure you against data sneaker on your personal browsing activity such as facebook, whatsapp, etc.</p>
-						<a href="#" class="btn btn-light float-left">Know More ..</a>
-						<a href="#" class="btn btn-primary float-right"><i class="fas fa-download"></i> Download</a>
+			<div ng-repeat="ql in quickLinkData">
+				<div class="row">
+					<div class="card border-info w-100">
+						<img ng-if="ql.Image!=''" class="card-img-top" src="{{ql.Image}}" alt="sai">
+						<div class="card-body">
+							<h5 class="card-title">
+								{{ql.Title}} <br>
+							</h5>
+							<div class="dis-inline" ng-repeat="tg in ql.Tag">
+								<span class="badge badge-pill badge-secondary">{{tg}}</span> &nbsp;
+							</div>
+							<h5></h5>
+							<p class="card-text">{{ql.Description}}</p>
+							<a href="#" class="btn btn-light float-left" ng-if="ql.ButtonOne!=''">{{ql.ButtonOne}}</a>
+							<a href="#" class="btn btn-primary float-right" ng-if="ql.ButtonTwo!=''"><i class="fas fa-download"></i> {{ql.ButtonTwo}}</a>
+						</div>
 					</div>
 				</div>
+				<div class="row">&nbsp;</div>
 			</div>
-			<div class="row">&nbsp;</div>
-			<div class="row">
-				<div class="card border-info w-100">
-					<div class="card-body">
-						<h5 class="card-title">
-							Want to read few thoughts ?<br>
-						</h5>
-						<span class="badge badge-pill badge-secondary">15th Jun 2018</span> &nbsp;
-						<span class="badge badge-pill badge-secondary">Blog Page</span> <h5></h5>
-						<p class="card-text">Sometime few thoughts use to strike down deep inside me. It`s a better idea to put it somewhere. Who know may be someone is reading it & feeling the same .. May Be You !</p>
-						<a href="#" class="btn btn-light">Read More ..</a>
-					</div>
-				</div>
-			</div>
-			<div class="row">&nbsp;</div>
 		</div>
 	</div>
 </div>
