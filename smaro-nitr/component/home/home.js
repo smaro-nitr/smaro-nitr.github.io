@@ -27,4 +27,4 @@ function home($scope, $state, $http) {
 		});
 	};
 }
-home.$inject = [ '$scope', '$state', '$http'];
+home.$inject = ['$scope', '$state', '$http'];
