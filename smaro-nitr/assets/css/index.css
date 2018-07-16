@@ -46,6 +46,9 @@ footer.jumbotron{
 .vis-576-x{
   display:none;
 }
+.dis-inline{
+  display:inline;
+}
 @media (min-width: 576px) {
   #smaro-nitr #connectModalCenterTitle{
     font-size:27px;

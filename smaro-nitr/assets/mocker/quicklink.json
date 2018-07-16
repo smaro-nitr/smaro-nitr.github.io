@@ -1,0 +1,19 @@
+[
+    {
+        "Title":"SingleAccessInterface (SAI)",
+        "Tag":["15th June 2018", "Desktop Software"],
+        "Description":"A software to secure you against data sneaker on your personal browsing activity such as facebook, whatsapp, etc.",
+        "ButtonOne":"Know More ..",
+        "ButtonTwo":"Download",
+        "Image":"smaro-nitr/assets/img/sai.jpg",
+        "ImageVisibility":true
+    },{
+        "Title":"Want to read few thoughts ?",
+        "Tag":["15th June 2018", "Blog Page"],
+        "Description":"Sometime few thoughts use to strike down deep inside me. It`s a better idea to put it somewhere. Who know may be someone is reading it & feeling the same .. May Be You !",
+        "ButtonOne":"Know More ..",
+        "ButtonTwo":"",
+        "Image":"smaro-nitr/assets/img/me-icon.jpg",
+        "ImageVisibility":false
+    }
+]
