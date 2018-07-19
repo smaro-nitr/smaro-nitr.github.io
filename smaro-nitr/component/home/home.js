@@ -1,30 +1,39 @@
 module.controller("home", home);
-function home($scope, $state, $http) {
+
+function home(snService, $rootScope, $scope) {
 	this.$onInit = function() {
-		$scope.codeNow();
-		$scope.quickLink();
+		//sessionStorage.setItem("accesstype","desktopapp");
+		$rootScope.navbarVisible = true;
+		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
+			$rootScope.navbarContactVisible=false;
+			$scope.accesstype="desktopapp";
+		}else{
+			$rootScope.navbarContactVisible=true;
+		}
+		$scope.codeNow("codenow");
+		$scope.quickLink("quicklink");
 	};
 
-	$scope.codeNow = function() {
-		$http({
-			method : "GET",
-			url : "smaro-nitr/assets/mocker/codenow.json"
-		}).then(function mySuccess(response) {
-			$scope.codeNowData = response.data;
-		}, function myError(response) {
-			$scope.codeNowData = response.statusText;
+	$scope.codeNow = function(fileName) {
+		snService.fetchJsonData(fileName)
+		.then(function (response) {
+			if (response.status) {
+				$scope.errorMsg = "failed to fetch codenow json";
+			}else{
+				$scope.codeNowData = response;
+			}
 		});
 	};
 
-	$scope.quickLink = function() {
-		$http({
-			method : "GET",
-			url : "smaro-nitr/assets/mocker/quicklink.json"
-		}).then(function mySuccess(response) {
-			$scope.quickLinkData = response.data;
-		}, function myError(response) {
-			$scope.quickLinkData = response.statusText;
+	$scope.quickLink = function(fileName) {
+		snService.fetchJsonData(fileName)
+		.then(function (response) {
+			if (response.status) {
+				$scope.errorMsg = "failed to fetch quicklink json";
+			}else{
+				$scope.quickLinkData = response;
+			}
 		});
 	};
 }
-home.$inject = ['$scope', '$state', '$http'];
+home.$inject = ['snService', '$rootScope', '$scope'];

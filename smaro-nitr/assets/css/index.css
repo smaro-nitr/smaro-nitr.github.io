@@ -49,6 +49,9 @@ footer.jumbotron{
 .dis-inline{
   display:inline;
 }
+.pointer{
+  cursor: pointer;
+}
 @media (min-width: 576px) {
   #smaro-nitr #connectModalCenterTitle{
     font-size:27px;

@@ -45,6 +45,21 @@
         "ReferenceUrl":"#",
         "NextPosition":"block"
     },{
+        "Title":"REST",
+        "Status":"badge-primary",
+        "ReferenceUrl":"#",
+        "NextPosition":"inline"
+    },{
+        "Title":"JSP",
+        "Status":"badge-info",
+        "ReferenceUrl":"#",
+        "NextPosition":"inline"
+    },{
+        "Title":"Servlet",
+        "Status":"badge-info",
+        "ReferenceUrl":"#",
+        "NextPosition":"block"
+    },{
         "Title":"NodeJs",
         "Status":"badge-primary",
         "ReferenceUrl":"#",

@@ -1,0 +1,42 @@
+[
+    {
+        "Version":"Version 1.2.0",
+        "CodeName":"Caiman",
+        "VersionType":"Stable",
+        "Latest":true,
+        "ReleaseDate":"23rd Aug 2018",
+        "VersionChanges": [
+            "Improvement : Auto Remembering Last App Access on Each Screen",
+            "Improvement : App Reset Option on Multiple Failure Login Attempt",
+            "Enhancement : Application Logo Updated",
+            "Bug Fixed : Password Reset through Split Screen has been Fixed"
+        ],
+        "DownloadLink":""
+    },{
+        "Version":"Version 1.1.0",
+        "CodeName":"Baboon",
+        "VersionType":"Stable",
+        "Latest":false,
+        "ReleaseDate":"3rd Jul 2018",
+        "VersionChanges": [
+            "Improvement : Auto Remembering Last App Access",
+            "Improvement : Temporary Lock Feature has been Added",
+            "Improvement : Split Viewing (Dual Viewing) Screen Added",
+            "Enhancement : Password Reset Option has been Added",
+            "Enhancement : Youtube, GoodReads added to the App List",
+            "Enhancement : Quick Exit from Lock Screen Added"
+        ],
+        "DownloadLink":""
+    },{
+        "Version":"Version 0.0.0-Beta",
+        "CodeName":"Aardwolf",
+        "VersionType":"Beta",
+        "Latest":false,
+        "ReleaseDate":"14th Mar 2018",
+        "VersionChanges": [
+            "Initial : App with pre-loaded content from Messenger, WhatsApp, Gmail, Instagram",
+            "Initial : Central Application Lock with Initial Password Reset"
+        ],
+        "DownloadLink":""
+    }
+]

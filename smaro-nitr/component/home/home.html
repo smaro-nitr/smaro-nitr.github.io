@@ -69,20 +69,20 @@
 				</div>
 			</div>
 			<div ng-repeat="ql in quickLinkData">
-				<div class="row">
+				<div class="row" ng-if="(accesstype=='desktopapp' && $index==0) ||  (accesstype!='desktopapp')">
 					<div class="card border-info w-100">
 						<img ng-if="ql.ImageVisibility" class="card-img-top" src="smaro-nitr/assets/img/sai.jpg" alt="sai">
 						<div class="card-body">
-							<h5 class="card-title">
-								{{ql.Title}} <br>
-							</h5>
+							<h4 class="card-title">
+								<i class="{{ql.Icon}}"></i> {{ql.Title}} <br>
+							</h4>
 							<div class="dis-inline" ng-repeat="tg in ql.Tag">
 								<span class="badge badge-pill badge-secondary">{{tg}}</span> &nbsp;
 							</div>
 							<h5></h5>
 							<p class="card-text">{{ql.Description}}</p>
-							<a href="#" class="btn btn-light float-left" ng-if="ql.ButtonOne!=''">{{ql.ButtonOne}}</a>
-							<a href="#" class="btn btn-primary float-right" ng-if="ql.ButtonTwo!=''"><i class="fas fa-download"></i> {{ql.ButtonTwo}}</a>
+							<a ui-sref="{{ql.ButtonOneUrl}}" class="btn btn-light float-left" ng-if="ql.ButtonOne!=''">{{ql.ButtonOne}}</a>
+							<a href="{{ql.ButtonTwoUrl}}" class="btn btn-primary float-right" ng-if="ql.ButtonTwo!=''"><i class="fas fa-download" ng-if="ql.ButtonTwo=='Download'"></i> {{ql.ButtonTwo}}</a>
 						</div>
 					</div>
 				</div>
@@ -91,6 +91,3 @@
 		</div>
 	</div>
 </div>
-<footer class="container-fluid jumbotron">
-	<span class="text-muted">Subhendu Kumar Sahoo &#169; 2018</span>
-</footer>
