@@ -11,11 +11,11 @@ function saiHome(saiService, $rootScope, $scope, $timeout) {
 		}
 		$scope.loaderVisibility = true;
 		$rootScope.scrollToTop();
-		$scope.startCarousel();
 		$scope.appStatus("appstatus");
 		$scope.faqDetail("faqdetail");
 		$timeout(function(){
 			$scope.loaderVisibility = false;
+			$scope.startCarousel();
 		}, 1000);
 	};
 
