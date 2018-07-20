@@ -8,10 +8,13 @@ function customNavbar(){
     };
 }
 
-function controller($rootScope) {
+function controller($rootScope, $window) {
     this.$onInit = function () {
         $rootScope.navbarVisible=true;
         $rootScope.navbarContactVisible=true;
+        $rootScope.scrollToTop = function(){
+            $window.scrollTo(0, 0);
+        }
     };
 }
-controller.$inject = ['$rootScope'];
+controller.$inject = ['$rootScope', '$window'];

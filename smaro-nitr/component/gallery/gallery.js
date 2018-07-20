@@ -1,7 +1,8 @@
 module.controller("gallery", gallery);
-function gallery($scope, $state, $http) {
+function gallery($rootScope, $scope) {
 	this.$onInit = function() {
-		
+		$rootScope.navbarVisible = true;
+		$rootScope.scrollToTop();
 	};
 }
-gallery.$inject = ['$scope', '$state', '$http'];
+gallery.$inject = ['$rootScope', '$scope'];

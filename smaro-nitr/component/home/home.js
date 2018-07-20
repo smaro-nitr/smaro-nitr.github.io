@@ -4,6 +4,7 @@ function home(snService, $rootScope, $scope) {
 	this.$onInit = function() {
 		//sessionStorage.setItem("accesstype","desktopapp");
 		$rootScope.navbarVisible = true;
+		$rootScope.scrollToTop();
 		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
 			$rootScope.navbarContactVisible=false;
 			$scope.accesstype="desktopapp";

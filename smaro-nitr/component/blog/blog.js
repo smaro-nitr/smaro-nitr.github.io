@@ -1,7 +1,8 @@
 module.controller("blog", blog);
-function blog($scope, $state, $http) {
+function blog($rootScope, $scope) {
 	this.$onInit = function() {
-		
+		$rootScope.navbarVisible = true;
+		$rootScope.scrollToTop();
 	};
 }
-blog.$inject = ['$scope', '$state', '$http'];
+blog.$inject = ['$rootScope', '$scope'];

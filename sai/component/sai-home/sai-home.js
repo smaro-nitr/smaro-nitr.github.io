@@ -9,6 +9,7 @@ function saiHome(saiService, $rootScope, $scope) {
 		}else{
 			$rootScope.navbarVisible = true;
 		}
+		$rootScope.scrollToTop();
 		$scope.startCarousel();
 		$scope.appStatus("appstatus");
 		$scope.faqDetail("faqdetail");
