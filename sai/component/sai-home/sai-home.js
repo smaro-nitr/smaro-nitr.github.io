@@ -22,7 +22,7 @@ function saiHome(saiService, $rootScope, $scope, $timeout) {
 	$scope.startCarousel =  function(){
 		$(document).ready(function(){
 			$('.carousel').carousel({
-				interval: 2000
+				interval: 3600
 			})
 		}); 
 	}

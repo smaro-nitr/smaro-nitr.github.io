@@ -51,12 +51,12 @@
         "NextPosition":"inline"
     },{
         "Title":"JSP",
-        "Status":"badge-info",
+        "Status":"badge-secondary",
         "ReferenceUrl":"#",
         "NextPosition":"inline"
     },{
         "Title":"Servlet",
-        "Status":"badge-info",
+        "Status":"badge-secondary",
         "ReferenceUrl":"#",
         "NextPosition":"block"
     },{
