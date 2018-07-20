@@ -1,6 +1,6 @@
 module.controller("home", home);
 
-function home(snService, $rootScope, $scope) {
+function home(snService, $rootScope, $scope, $timeout) {
 	this.$onInit = function() {
 		//sessionStorage.setItem("accesstype","desktopapp");
 		$rootScope.navbarVisible = true;
@@ -11,8 +11,12 @@ function home(snService, $rootScope, $scope) {
 		}else{
 			$rootScope.navbarContactVisible=true;
 		}
+		$scope.loaderVisibility = true;
 		$scope.codeNow("codenow");
 		$scope.quickLink("quicklink");
+		$timeout(function(){
+			$scope.loaderVisibility = false;
+		}, 1000);
 	};
 
 	$scope.codeNow = function(fileName) {
@@ -37,4 +41,4 @@ function home(snService, $rootScope, $scope) {
 		});
 	};
 }
-home.$inject = ['snService', '$rootScope', '$scope'];
+home.$inject = ['snService', '$rootScope', '$scope', '$timeout'];

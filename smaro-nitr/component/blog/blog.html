@@ -1,4 +1,7 @@
-<div class="container">
+<div class="container-fluid" ng-if="loaderVisibility">
+    <div class="row" id="site-loader"></div>
+</div>
+<div class="container" ng-if="!loaderVisibility">
     <div class="row justify-content-center">
         <p><img src="smaro-nitr/assets/img/in-progress.png" title=""></p>
     </div>

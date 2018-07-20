@@ -1,6 +1,6 @@
 module.controller("sai-home", saiHome);
 
-function saiHome(saiService, $rootScope, $scope) {
+function saiHome(saiService, $rootScope, $scope, $timeout) {
 	this.$onInit = function() {
 		//sessionStorage.setItem("accesstype","desktopapp");
 		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
@@ -9,10 +9,14 @@ function saiHome(saiService, $rootScope, $scope) {
 		}else{
 			$rootScope.navbarVisible = true;
 		}
+		$scope.loaderVisibility = true;
 		$rootScope.scrollToTop();
 		$scope.startCarousel();
 		$scope.appStatus("appstatus");
 		$scope.faqDetail("faqdetail");
+		$timeout(function(){
+			$scope.loaderVisibility = false;
+		}, 1000);
 	};
 
 	$scope.startCarousel =  function(){
@@ -46,4 +50,4 @@ function saiHome(saiService, $rootScope, $scope) {
 		});
 	};
 }
-saiHome.$inject = ['saiService', '$rootScope', '$scope'];
+saiHome.$inject = ['saiService', '$rootScope', '$scope', '$timeout'];
