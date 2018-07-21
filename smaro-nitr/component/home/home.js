@@ -1,8 +1,6 @@
 module.controller("home", home);
-
-function home(snService, $rootScope, $scope, $timeout) {
+function home(snService, $rootScope, $scope, $window, $interval) {
 	this.$onInit = function() {
-		//sessionStorage.setItem("accesstype","desktopapp");
 		$rootScope.navbarVisible = true;
 		$rootScope.scrollToTop();
 		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
@@ -14,9 +12,12 @@ function home(snService, $rootScope, $scope, $timeout) {
 		$scope.loaderVisibility = true;
 		$scope.codeNow("codenow");
 		$scope.quickLink("quicklink");
-		$timeout(function(){
-			$scope.loaderVisibility = false;
-		}, 1000);
+		$scope.promise = $interval(function(){
+			if($window.document.readyState==="complete"){
+				$scope.loaderVisibility = false;
+				$interval.cancel($scope.promise);
+			}
+		}, 10);
 	};
 
 	$scope.codeNow = function(fileName) {
@@ -41,4 +42,4 @@ function home(snService, $rootScope, $scope, $timeout) {
 		});
 	};
 }
-home.$inject = ['snService', '$rootScope', '$scope', '$timeout'];
+home.$inject = ['snService', '$rootScope', '$scope', '$window', '$interval'];

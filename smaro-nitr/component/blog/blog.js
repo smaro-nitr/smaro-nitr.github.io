@@ -1,12 +1,15 @@
 module.controller("blog", blog);
-function blog($rootScope, $scope, $timeout) {
+function blog($rootScope, $scope, $window, $interval) {
 	this.$onInit = function() {
 		$rootScope.navbarVisible = true;
 		$rootScope.scrollToTop();
 		$scope.loaderVisibility = true;
-		$timeout(function(){
-			$scope.loaderVisibility = false;
-		}, 1000);
+		$scope.promise = $interval(function(){
+			if($window.document.readyState==="complete"){
+				$scope.loaderVisibility = false;
+				$interval.cancel($scope.promise);
+			}
+		}, 10);
 	};
 }
-blog.$inject = ['$rootScope', '$scope', '$timeout'];
+blog.$inject = ['$rootScope', '$scope', '$window', '$interval'];

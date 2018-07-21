@@ -1,8 +1,6 @@
 module.controller("sai-home", saiHome);
-
-function saiHome(saiService, $rootScope, $scope, $timeout) {
-	this.$onInit = function() {
-		//sessionStorage.setItem("accesstype","desktopapp");
+function saiHome(saiService, $rootScope, $scope, $window, $interval) {
+	this.$onInit = function() {		
 		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
 			$rootScope.navbarVisible = false;
 			$scope.accesstype="desktopapp";
@@ -13,16 +11,20 @@ function saiHome(saiService, $rootScope, $scope, $timeout) {
 		$rootScope.scrollToTop();
 		$scope.appStatus("appstatus");
 		$scope.faqDetail("faqdetail");
-		$timeout(function(){
-			$scope.loaderVisibility = false;
-			$scope.startCarousel();
-		}, 1000);
+		$scope.promise = $interval(function(){
+			if($window.document.readyState==="complete"){
+				$scope.loaderVisibility = false;
+				$scope.startCarousel();
+				$interval.cancel($scope.promise);
+			}
+		}, 10);
 	};
 
 	$scope.startCarousel =  function(){
 		$(document).ready(function(){
 			$('.carousel').carousel({
-				interval: 3600
+				interval: 3600,
+				pause: "false"
 			})
 		}); 
 	}
@@ -50,4 +52,4 @@ function saiHome(saiService, $rootScope, $scope, $timeout) {
 		});
 	};
 }
-saiHome.$inject = ['saiService', '$rootScope', '$scope', '$timeout'];
+saiHome.$inject = ['saiService', '$rootScope', '$scope', '$window', '$interval'];
