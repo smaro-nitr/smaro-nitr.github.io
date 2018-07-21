@@ -70,7 +70,7 @@
 							<i class="fab fab fa-connectdevelop"></i> Developer Website
 						</a>
 						<a href="" class="btn btn-primary float-right" ng-if="accesstype!='desktopapp'">
-							<i class="fas fa-download"></i> Try Now
+							<i class="fab fa-windows"></i> Try Now
 						</a>
 					</div>
 				</div>
@@ -101,14 +101,14 @@
 						<br>
 						<div class="float-left w-100">
 							<button class="btn btn-secondary float-left" type="button" data-toggle="collapse" data-target="#collapseVersion" aria-expanded="false" aria-controls="collapseVersion" ng-if="accesstype!='desktopapp'">
-								<i class="fas fa-download"></i> Other Version
+								<i class="fas fa-download"></i> All Version
 							</button>
-							<a href="" class="btn btn-primary float-right"><i class="fas fa-download"></i> Latest Version</a>	
+							<a href="" class="btn btn-primary float-right"><i class="fab fa-windows"></i> Latest Version</a>	
 						</div>
 						<div class="collapse float-left w-100" id="collapseVersion"><br>
 							<div ng-repeat="asd in appStatusData">	
 								<a ng-if="asd.VersionType=='Stable'" href="{{asd.DownloadLink}}" class="btn btn-light w-100">
-									<i class="fas fa-download"></i> {{asd.Version}}&nbsp; &nbsp; 
+									<i class="fab fa-windows"></i> {{asd.Version}}&nbsp; &nbsp; 
 								</a>
 								<span ng-if="$index!=appStatusDataLength-1"><br><br></span>
 							</div>
