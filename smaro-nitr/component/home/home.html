@@ -84,8 +84,9 @@
 							</div>
 							<h5></h5>
 							<p class="card-text">{{ql.Description}}</p>
-							<a ui-sref="{{ql.ButtonOneUrl}}" class="btn btn-light float-left" ng-if="ql.ButtonOne!=''">{{ql.ButtonOne}}</a>
-							<a href="{{ql.ButtonTwoUrl}}" class="btn btn-primary float-right" ng-if="ql.ButtonTwo!=''"><i class="fab fa-windows" ng-if="ql.ButtonTwo=='Download'"></i> {{ql.ButtonTwo}}</a>
+							<a ui-sref="{{ql.ButtonOneUrl}}" class="btn btn-light float-left" ng-if="ql.ButtonOne!='' && accesstype!='desktopapp'">{{ql.ButtonOne}}</a>
+							<a href="{{ql.ButtonTwoUrl}}" class="btn btn-primary float-right" ng-if="ql.ButtonTwo!='' && accesstype!='desktopapp'"><i class="fab fa-windows" ng-if="ql.ButtonTwo=='Download'"></i> {{ql.ButtonTwo}}</a>
+							<a href="#!/sai-home?apptype=desktopapp" class="btn btn-primary float-right" ng-if="accesstype=='desktopapp'"><i class="fab fab fa-connectdevelop"></i> Application Website</a>
 						</div>
 					</div>
 				</div>

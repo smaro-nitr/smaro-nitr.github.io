@@ -1,9 +1,10 @@
 module.controller("home", home);
-function home(snService, $rootScope, $scope, $window, $interval) {
+function home(snService, $rootScope, $scope, $window, $interval, $location) {
 	this.$onInit = function() {
 		$rootScope.navbarVisible = true;
 		$rootScope.scrollToTop();
-		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
+		if($scope.accessMode("apptype")=="desktopapp"){
+			$rootScope.navbarVisible = false;
 			$rootScope.navbarContactVisible=false;
 			$scope.accesstype="desktopapp";
 		}else{
@@ -18,6 +19,13 @@ function home(snService, $rootScope, $scope, $window, $interval) {
 				$interval.cancel($scope.promise);
 			}
 		}, 10);
+	};
+
+	$scope.accessMode = function(param){
+		$scope.paramLength = param.length;
+		$scope.locationHash = $location.url();
+		$scope.paramValue = ($scope.locationHash.search("apptype")=="-1")?"":$scope.locationHash.substring($scope.locationHash.search("apptype")+$scope.paramLength+1, $scope.locationHash.length)
+		return $scope.paramValue;
 	};
 
 	$scope.codeNow = function(fileName) {
@@ -42,4 +50,4 @@ function home(snService, $rootScope, $scope, $window, $interval) {
 		});
 	};
 }
-home.$inject = ['snService', '$rootScope', '$scope', '$window', '$interval'];
+home.$inject = ['snService', '$rootScope', '$scope', '$window', '$interval', '$location'];

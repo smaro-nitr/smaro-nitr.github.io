@@ -1,7 +1,7 @@
 module.controller("sai-home", saiHome);
-function saiHome(saiService, $rootScope, $scope, $window, $interval) {
+function saiHome(saiService, $rootScope, $scope, $window, $interval, $location) {
 	this.$onInit = function() {		
-		if(sessionStorage.getItem("accesstype") && sessionStorage.getItem("accesstype")=="desktopapp"){
+		if($scope.accessMode("apptype")=="desktopapp"){
 			$rootScope.navbarVisible = false;
 			$scope.accesstype="desktopapp";
 		}else{
@@ -18,6 +18,13 @@ function saiHome(saiService, $rootScope, $scope, $window, $interval) {
 				$interval.cancel($scope.promise);
 			}
 		}, 10);
+	};
+
+	$scope.accessMode = function(param){
+		$scope.paramLength = param.length;
+		$scope.locationHash = $location.url();
+		$scope.paramValue = ($scope.locationHash.search("apptype")=="-1")?"":$scope.locationHash.substring($scope.locationHash.search("apptype")+$scope.paramLength+1, $scope.locationHash.length)
+		return $scope.paramValue;
 	};
 
 	$scope.startCarousel =  function(){
@@ -52,4 +59,4 @@ function saiHome(saiService, $rootScope, $scope, $window, $interval) {
 		});
 	};
 }
-saiHome.$inject = ['saiService', '$rootScope', '$scope', '$window', '$interval'];
+saiHome.$inject = ['saiService', '$rootScope', '$scope', '$window', '$interval', '$location'];
