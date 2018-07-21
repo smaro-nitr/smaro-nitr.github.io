@@ -23,7 +23,6 @@
   color:#aaa
 }
 #smaro-nitr #quick-link{
-  color:#ddc701;
   text-align:center;
 }
 footer.jumbotron{
@@ -60,9 +59,9 @@ footer.jumbotron{
 }
 #site-loader{
   height:5px;
-  animation-name: loader-animation;
-  animation-duration: 1s;
-  animation-iteration-count: infinite;
+  animation-name:loader-animation;
+  animation-duration:3s;
+  animation-iteration-count:infinite;
 }
 @media (min-width: 576px) {
   #smaro-nitr #connectModalCenterTitle{
