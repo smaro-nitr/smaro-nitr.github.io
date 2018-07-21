@@ -63,6 +63,10 @@ footer.jumbotron{
   animation-duration:3s;
   animation-iteration-count:infinite;
 }
+.version-date{
+  font-size:10px;
+  color:#6c757d;
+}
 @media (min-width: 576px) {
   #smaro-nitr #connectModalCenterTitle{
     font-size:27px;

@@ -91,7 +91,7 @@
 						<div ng-repeat="asd in appStatusData">
 							<p class="card-text">
 								<h6 class="pointer" data-toggle="collapse" data-target="#{{asd.CodeName}}" aria-expanded="{{asd.Latest}}" aria-controls="{{asd.CodeName}}">
-									<i class="fas fa-chevron-circle-down"></i> {{asd.Version}}
+									<b><i class="fas fa-chevron-circle-down"></i> {{asd.Version}} </b> <i class="version-date">{{asd.ReleaseDate}}</i>
 								</h6>
 								<ul class="collapse {{(asd.Latest==true)?'show':''}} float-left w-100" id="{{asd.CodeName}}" ng-repeat="vc in asd.VersionChanges">
 									<li>{{vc}}</li>
@@ -99,8 +99,8 @@
 							</p>
 						</div>
 						<br>
-						<div class="float-left w-100">
-							<button class="btn btn-secondary float-left" type="button" data-toggle="collapse" data-target="#collapseVersion" aria-expanded="false" aria-controls="collapseVersion" ng-if="accesstype!='desktopapp'">
+						<div class="float-left w-100" ng-if="accesstype!='desktopapp'">
+							<button class="btn btn-secondary float-left" type="button" data-toggle="collapse" data-target="#collapseVersion" aria-expanded="false" aria-controls="collapseVersion">
 								<i class="fas fa-download"></i> All Version
 							</button>
 							<a href="" class="btn btn-primary float-right"><i class="fab fa-windows"></i> Latest Version</a>	
@@ -112,6 +112,12 @@
 								</a>
 								<span ng-if="$index!=appStatusDataLength-1"><br><br></span>
 							</div>
+						</div>
+						<div class="float-left w-100" ng-if="accesstype=='desktopapp'">
+							<p class="text-center">
+								Download Latest Version & Stay Secure<br>
+								Visit Today : <b class="text-primary">smaro-nitr.github.com/sai</b>
+							</p>
 						</div>
 					</div>
 				</div>
