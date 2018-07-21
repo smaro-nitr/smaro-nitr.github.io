@@ -1,13 +1,13 @@
 module.controller("home", home);
 function home(snService, $rootScope, $scope, $window, $interval, $location) {
 	this.$onInit = function() {
-		$rootScope.navbarVisible = true;
 		$rootScope.scrollToTop();
 		if($scope.accessMode("apptype")=="desktopapp"){
 			$rootScope.navbarVisible = false;
 			$rootScope.navbarContactVisible=false;
 			$scope.accesstype="desktopapp";
 		}else{
+			$rootScope.navbarVisible = true;
 			$rootScope.navbarContactVisible=true;
 		}
 		$scope.loaderVisibility = true;

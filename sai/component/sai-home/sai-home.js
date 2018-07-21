@@ -6,6 +6,7 @@ function saiHome(saiService, $rootScope, $scope, $window, $interval, $location) 
 			$scope.accesstype="desktopapp";
 		}else{
 			$rootScope.navbarVisible = true;
+			$rootScope.navbarContactVisible=true;
 		}
 		$scope.loaderVisibility = true;
 		$rootScope.scrollToTop();
