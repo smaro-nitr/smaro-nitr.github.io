@@ -1,6 +1,7 @@
 module.controller("sai-home", saiHome);
 function saiHome(saiService, $rootScope, $scope, $window, $interval, $location) {
-	this.$onInit = function() {		
+	this.$onInit = function() {
+		$window.scrollTo(0, 0);
 		if($scope.accessMode("apptype")=="desktopapp"){
 			$rootScope.navbarVisible = false;
 			$scope.accesstype="desktopapp";
@@ -9,7 +10,6 @@ function saiHome(saiService, $rootScope, $scope, $window, $interval, $location) 
 			$rootScope.navbarContactVisible=true;
 		}
 		$scope.loaderVisibility = true;
-		$rootScope.scrollToTop();
 		$scope.appStatus("appstatus");
 		$scope.faqDetail("faqdetail");
 		$scope.promise = $interval(function(){

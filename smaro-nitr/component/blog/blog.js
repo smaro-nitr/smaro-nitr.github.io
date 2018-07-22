@@ -1,7 +1,7 @@
 module.controller("blog", blog);
 function blog($rootScope, $scope, $window, $interval) {
 	this.$onInit = function() {
-		$rootScope.scrollToTop();
+		$window.scrollTo(0, 0);
 		$rootScope.navbarVisible = true;
 		$rootScope.navbarContactVisible=true;
 		$scope.loaderVisibility = true;

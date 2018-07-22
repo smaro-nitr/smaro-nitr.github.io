@@ -1,7 +1,7 @@
 module.controller("home", home);
 function home(snService, $rootScope, $scope, $window, $interval, $location) {
 	this.$onInit = function() {
-		$rootScope.scrollToTop();
+		$window.scrollTo(0, 0);
 		if($scope.accessMode("apptype")=="desktopapp"){
 			$rootScope.navbarVisible = false;
 			$rootScope.navbarContactVisible=false;
