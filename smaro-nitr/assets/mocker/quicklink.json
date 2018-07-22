@@ -4,10 +4,10 @@
         "Icon":"fas fa-file-code",
         "Tag":["v1.2.0", "23rd Aug 2018", "Desktop Software"],
         "Description":"A software to secure you against data sneaker on your personal browsing activity such as facebook, whatsapp, etc.",
-        "ButtonOne":"Know More ..",
-        "ButtonOneUrl":"sai-home",
-        "ButtonTwo":"Download",
-        "ButtonTwoUrl":"https://drive.google.com/uc?export=download&id=1KVSSjlnH0y8F3sT0ODjOfgqUiwXsM32K",
+        "ButtonOne":"",
+        "ButtonOneUrl":"",
+        "ButtonTwo":"Know More ..",
+        "ButtonTwoUrl":"sai-home",
         "ImageVisibility":true
     },{
         "Title":"Capture & Make Memories",
@@ -26,7 +26,7 @@
         "Description":"Sometime few thoughts use to strike down deep inside me. It`s a better idea to put it somewhere. Who know may be someone is reading it & feeling the same .. May Be You !",
         "ButtonOne":"",
         "ButtonOneUrl":"",
-        "ButtonTwo":"Know More ..",
+        "ButtonTwo":"Read More ..",
         "ButtonTwoUrl":"#!/blog",
         "ImageVisibility":false
     }
