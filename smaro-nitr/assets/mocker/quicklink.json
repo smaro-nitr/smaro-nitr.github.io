@@ -2,7 +2,7 @@
     {
         "Title":"SAI: SingleAccessInterface",
         "Icon":"fas fa-file-code",
-        "Tag":["15th June 2018", "Desktop Software"],
+        "Tag":["v1.2.0", "23rd Aug 2018", "Desktop Software"],
         "Description":"A software to secure you against data sneaker on your personal browsing activity such as facebook, whatsapp, etc.",
         "ButtonOne":"Know More ..",
         "ButtonOneUrl":"sai-home",
@@ -10,9 +10,9 @@
         "ButtonTwoUrl":"https://drive.google.com/uc?export=download&id=1KVSSjlnH0y8F3sT0ODjOfgqUiwXsM32K",
         "ImageVisibility":true
     },{
-        "Title":"Sometime I capture too",
+        "Title":"Capture & Make Memories",
         "Icon":"fas fa-camera",
-        "Tag":["15th June 2018", "Photography"],
+        "Tag":["Photography"],
         "Description":"I See, I Snap ! Beauty is all around, Be lucky enough to get it done with your camera.",
         "ButtonOne":"",
         "ButtonOneUrl":"",
@@ -22,7 +22,7 @@
     },{
         "Title":"Sword of Words",
         "Icon":"fas fa-rss-square",
-        "Tag":["15th June 2018", "Blog Page"],
+        "Tag":["Blog Page"],
         "Description":"Sometime few thoughts use to strike down deep inside me. It`s a better idea to put it somewhere. Who know may be someone is reading it & feeling the same .. May Be You !",
         "ButtonOne":"",
         "ButtonOneUrl":"",

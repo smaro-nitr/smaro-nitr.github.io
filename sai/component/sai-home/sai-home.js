@@ -45,6 +45,11 @@ function saiHome(saiService, $rootScope, $scope, $window, $interval, $location) 
 			}else{
 				$scope.appStatusData = response;
 				$scope.appStatusDataLength = $scope.appStatusData.length;
+				angular.forEach($scope.appStatusData, function(value, key) {
+					if(value.Latest==true){
+						$scope.latestDownloadLink = value.DownloadLink;
+					};
+				});
 			}
 		});
 	};

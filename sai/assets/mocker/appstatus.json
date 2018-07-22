@@ -8,7 +8,9 @@
         "VersionChanges": [
             "Improvement : Auto Remembering Last App Access on Each Screen",
             "Improvement : App Reset Option on Multiple Failure Login Attempt",
+            "Improvement : Input field validation activated",
             "Enhancement : Application Logo Updated",
+            "Enhancement : Quick Exit from Lock Screen Added",
             "Bug Fixed : Password Reset through Split Screen has been Fixed"
         ],
         "DownloadLink":"https://drive.google.com/uc?export=download&id=1KVSSjlnH0y8F3sT0ODjOfgqUiwXsM32K"
@@ -17,18 +19,19 @@
         "CodeName":"Baboon",
         "VersionType":"Stable",
         "Latest":false,
-        "ReleaseDate":"3rd Jul 2018",
+        "ReleaseDate":"4th Jul 2018",
         "VersionChanges": [
             "Improvement : Auto Remembering Last App Access",
             "Improvement : Temporary Lock Feature has been Added",
             "Improvement : Split Viewing (Dual Viewing) Screen Added",
             "Enhancement : Password Reset Option has been Added",
             "Enhancement : Youtube, GoodReads added to the App List",
-            "Enhancement : Quick Exit from Lock Screen Added"
+            "Enhancement : Application Logo Updated",
+            "Enhancement : Application name changed to SingleAccessInterface from OneTouch"
         ],
-        "DownloadLink":""
+        "DownloadLink":"https://drive.google.com/uc?export=download&id=117mVwVtDgf46pbqN6pBgRi0Mju0lATnY"
     },{
-        "Version":"Version 0.0.0-Beta",
+        "Version":"Version 1.0.0-Beta",
         "CodeName":"Aardwolf",
         "VersionType":"Beta",
         "Latest":false,
@@ -37,6 +40,6 @@
             "Initial : App with pre-loaded content from Messenger, WhatsApp, Gmail, Instagram",
             "Initial : Central Application Lock with Initial Password Reset"
         ],
-        "DownloadLink":""
+        "DownloadLink":"https://drive.google.com/uc?export=download&id=1DCyVq-28DHfDG0Ca9CKlJU7hjfSCu8DJ"
     }
 ]
