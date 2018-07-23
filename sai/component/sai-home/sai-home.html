@@ -69,7 +69,7 @@
 						<a href="#!/home?apptype=desktopapp" class="btn btn-primary float-right" ng-if="accesstype=='desktopapp'">
 							<i class="fab fab fa-connectdevelop"></i> Developer Website
 						</a>
-						<a href="{{latestDownloadLink}}" target="_blank" class="btn btn-primary float-right" ng-if="accesstype!='desktopapp'">
+						<a href="{{latestMicrosoftDownloadLink}}" class="btn btn-primary float-right" ng-if="accesstype!='desktopapp'">
 							<i class="fab fa-windows"></i> Try Now
 						</a>
 					</div>
@@ -103,11 +103,11 @@
 							<button class="btn btn-secondary float-left" type="button" data-toggle="collapse" data-target="#collapseVersion" aria-expanded="false" aria-controls="collapseVersion">
 								<i class="fas fa-download"></i> All Version
 							</button>
-							<a href="{{latestDownloadLink}}" target="_blank" class="btn btn-primary float-right"><i class="fab fa-windows"></i> Latest Version</a>	
+							<a href="{{latestMicrosoftDownloadLink}}" class="btn btn-primary float-right"><i class="fab fa-windows"></i> Latest Version</a>	
 						</div>
 						<div class="collapse float-left w-100" id="collapseVersion"><br>
 							<div ng-repeat="asd in appStatusData">	
-								<a href="{{asd.DownloadLink}}" target="_blank" class="btn btn-light w-100">
+								<a href="{{asd.MicrosoftDownloadLink}}" class="btn btn-light w-100">
 									<i class="fab fa-windows"></i> {{asd.Version}}&nbsp; &nbsp; 
 								</a>
 								<span ng-if="$index!=appStatusDataLength-1"><br><br></span>
