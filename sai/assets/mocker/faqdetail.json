@@ -1,0 +1,17 @@
+[
+    {
+        "IssueCode":"S0K0S1",
+        "Question":"Does first time login require password reset ? Or this will happen everytime",
+        "ParaAnswer":"Yes ! You need to create an unique password only once for your application. This is one time forced password reset. This is done to ensure the objective of application is meet and to keep your data safe.",
+        "BullAnswer":""
+    },{
+        "IssueCode":"S0K0S2",
+        "Question":"I tried one-time password reseting. But didn`t work ?",
+        "ParaAnswer":"",
+        "BullAnswer":[
+            "Make sure you entered password in both field (new password and re-enter password)",
+            "Make sure your password is more than 5 characters",
+            "Make sure your password and re-enter password field are matching"
+        ]
+    }
+]
