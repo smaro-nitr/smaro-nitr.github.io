@@ -1,1 +1,64 @@
-<!DOCTYPE html> <html> <head> <style> @import url(https://fonts.googleapis.com/css?family=Montserrat); html, body{ height: 100vh; padding: 0; margin: 0; } body{ background: #030321; font-family: Arial; } svg { display: block; font: 7em 'Montserrat'; width: 80%; height: 100vh; margin: 0 auto; } .crawler { fill: none; stroke: white; stroke-dasharray: 6% 29%; stroke-width: 5px; stroke-dashoffset: 0%; animation: stroke-offset 6s infinite linear; } .crawler:nth-child(1){ stroke: #003300; animation-delay: -1; } .crawler:nth-child(2){ stroke: #008000; animation-delay: -2s; } .crawler:nth-child(3){ stroke: #00cc00; animation-delay: -3s; } .crawler:nth-child(4){ stroke: #1aff1a; animation-delay: -4s; } .crawler:nth-child(5){ stroke: #66ff66; animation-delay: -5s; } .crawler:nth-child(6){ stroke: #b3ffb3; animation-delay: -6s; } @keyframes stroke-offset{ 100% {stroke-dashoffset: -35%;} } </style> </head> <body> <svg> <symbol id="text"> <text text-anchor="middle" x="50%" y="50%">Coming Soon v20</text> </symbol> <g class="crawler-group"> <use xlink:href="#text" class="crawler"></use> <use xlink:href="#text" class="crawler"></use> <use xlink:href="#text" class="crawler"></use> <use xlink:href="#text" class="crawler"></use> <use xlink:href="#text" class="crawler"></use> <use xlink:href="#text" class="crawler"></use> </g> </svg> </body> </html>
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="theme-color" content="#003171">
+        
+		<title>Subhendu Kumar Sahoo</title>
+		<!-- 
+			Application
+				Website : smaro-nitr@github.com
+			Developer
+				Subhendu Kumar Sahoo
+			Support
+				smaro.nitr@gmail.com 
+				Bengaluru, KA, India © 2018
+		-->
+		<meta name="author" content="Subhendu Kumar Sahoo" />
+		<meta name="contact" content="smaro.nitr@gmail.com" />
+		<meta name="last-verified" content="15/07/2018" />
+		
+		<meta property="og:title" content="Subhendu"/>
+		<meta property="og:image" content="smaro-nitr/assets/img/me.jpg"/>
+		<meta property="og:description" content="Subhendu Kumar Sahoo"/>
+		<meta property="og:url" content="https://smaro-nitr.github.io/smaro-nitr/assets/img/me.jpg"/>
+
+        <link rel="icon" href="smaro-nitr/assets/img/me.jpg" type="image/gif" sizes="16x16">
+
+        <link rel="stylesheet" type="text/css" href="smaro-nitr/assets/css/lib/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		
+        <link rel="stylesheet" type="text/css" href="smaro-nitr/assets/css/index.css">
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.2/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.18/angular-ui-router.js"></script>
+        
+        <script src="routing.js"></script>
+        <script src="smaro-nitr/service/smaro-nitr.service.js"></script>
+        <script src="smaro-nitr/directive/navbar/navbar.js"></script>
+        <script src="smaro-nitr/directive/footer/footer.js"></script>
+        <script src="smaro-nitr/component/home/home.js"></script>
+        <script src="smaro-nitr/component/gallery/gallery.js"></script>
+		<script src="smaro-nitr/component/blog/blog.js"></script>
+        <script src="sai/service/sai.service.js"></script>
+        <script src="sai/component/sai-home/sai-home.js"></script>
+	</head>
+	<body ng-app="myApp" id="smaro-nitr">
+		<custom-navbar></custom-navbar>
+		<section>
+			<ui-view ng-cloak></ui-view>
+		</section>
+		<custom-footer></custom-footer>
+
+		<script src="smaro-nitr/assets/js/lib/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="smaro-nitr/assets/js/lib/bootstrap.min.js"></script>
+	</body>
+</html>
