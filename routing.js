@@ -27,4 +27,5 @@ module.config(function($stateProvider, $urlMatcherFactoryProvider, $urlRouterPro
 		url : "/coming-soon",
 		templateUrl : "coming-soon.html"
 	})
+	$urlRouterProvider.otherwise("/coming-soon");
 });
